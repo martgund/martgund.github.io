@@ -1,4 +1,7 @@
+
 <!DOCTYPE html>
+
+
 <html>
 	<head>
 		<title>Martin Gundersen</title>
@@ -10,11 +13,89 @@
 
 	<div class="headers">
 	
-		<headsies><a href="index.html" >Martin Gundersen</a></headsies>
+		<headsies>Martin Gundersen</headsies>
 		
 	</div>
 
+	<div class="menu" id="menuload">
+		<header>
+			<a href="#" class="menu-toggle">☰</a>
+
+			<nav class = "menu-side">
+
+			<ul id ="nav">
+				<li><a href="about.html">About</a></li>
+				<li><a href="hello.html">CV</a></li>
+				<li><a href="about.html">Algorithms</a></li>
+			</ul>
+			</nav>
+		</header>
+
+	</div>
+	<div id="content">    	
+        <h2>Welcome!</h2>
+        <p>Hi, welcome to the demonstration for the NETTUTS tutorial - "How to Load In and Animate Content with jQuery"</p>
+        <p>In this tutorial we will be taking your average everyday website and enhancing it with jQuery. We will be adding ajax functionality so that the content loads into the relevant container instead of the user having to navigate to another page. We will also be integrating some awesome effects...</p>
+    </div>
+
 	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+	<script>
+		(function(){
+				var body = $('.menu');
+				$('.menu-toggle').bind('click', function(){
+					body.toggleClass('menu-open');
+					return false;
+				});
+			})();
+		</script>
+
+
+
+	<script type="text/javascript">
+
+	$(document).ready(function() {
+	     
+	    // Check for hash value in URL
+	    var hash = window.location.hash.substr(1);
+	    var href = $('#nav li a').each(function(){
+
+	        var href = $(this).attr('href');
+	        if(hash==href.substr(0,href.length-5)){
+	            var toLoad = hash+'.html #content';
+	            $('#content').load(toLoad)
+	            console.log("2")
+	        } 
+	    });
+	     
+	    $('#nav li a').click(function(){
+	     
+	    var toLoad = $(this).attr('href')+' #content';
+	    $('#content').hide('fast',loadContent);
+	    console.log("1")
+	    $('#load').remove();
+	    $('#load').fadeIn('normal');
+	    window.location.hash = $(this).attr('href').substr(0,$(this).attr('href').length-5);
+	    function loadContent() {
+	        $('#content').load(toLoad,'',showNewContent())
+	    }
+	    function showNewContent() {
+	        $('#content').show('normal',hideLoader());
+	    }
+	    function hideLoader() {
+	        $('#load').fadeOut('normal');
+	    }
+	    return false;
+	     
+	    });
+	});
+
+
+
+
+	</script>
 	
 
 	</body>

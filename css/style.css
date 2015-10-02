@@ -1,5 +1,7 @@
+
 body{
-	background: #666;
+	background: #1C1C1C;
+	overflow-x: hidden;
 	
 }
 
@@ -15,13 +17,80 @@ body{
 	text-decoration: none;
 
 }
-headsies{
 
-    
+
+headsies{
 	font-size: 80px;
-	font-family: sans-serif;
-	color: black;
+	font-family: Avenir;
+	color: white;
 	margin-top: 50px;
-	letter-spacing: -2px;
-	text-shadow: -0.5px 0.5px 7px white;
+	letter-spacing: 5px;
 }
+.menu{
+	overflow-x: hidden;
+	position: relative;
+	top: -155px;
+	left: 10px;
+	height: 100%
+	
+}
+.menu a{
+	text-decoration: none;
+	font-size: 30px;
+	color: white;
+}
+
+.menu-open{
+	left:231px;
+}
+.menu-open .menu-side{
+	left: 0;
+
+}
+
+.menu-side,
+	.menu{
+		-webkit-transition: left .25s ease;
+		-moz-transition: left .25s ease;
+		-ms-transition: left .25s ease;
+		-o-transition: left .25s ease;
+		transition: left .25s ease;
+	}
+
+.menu-side{
+	background-color: #333;
+	border-right: 1px solid #000;
+
+	color: #fff;
+	position: fixed;
+	top: 0;
+	left: -231px;
+	width: 210px;
+	height: 100%;
+	padding: 10px;
+
+}
+
+.menu-side ul{
+	list-style-type: none;
+	font-size: 25px;
+}
+.menu-side ul li{
+	padding-bottom: 15px;
+}
+
+#load {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: url(images/ajax-loader.gif);
+    width: 43px;
+    height: 11px;
+    text-indent: -9999em;
+}
+#content{
+	padding-left: 231px;
+	padding-right:231px;
+}
+
