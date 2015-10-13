@@ -3,7 +3,10 @@
 
 	<body>
 		<object id="content">
-		<?php header('Content-type: application/pdf'); header('Content-Disposition: inline; filename="CV_Martin_Gundersen.pdf"'); readfile('CV_Martin_Gundersen.pdf'); ?> 
+		<?php
+			header('Content-type: application/pdf');
+			readfile('CV_Martin_Gundersen.pdf');
+			?>
 		</object>
 </body>
 </html>
