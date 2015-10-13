@@ -79,22 +79,12 @@ headsies{
 	padding-bottom: 15px;
 }
 
-#load {
-    display: none;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    background: url(images/ajax-loader.gif);
-    width: 43px;
-    height: 11px;
-    text-indent: -9999em;
-}
-
 #content {
 	padding-left: 140px;
 	padding-right: 140px;
 	text-align: center;
 	color: white;
+	font-size: 14px;
 }
 
 
