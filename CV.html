@@ -3,15 +3,7 @@
 
 	<body>
 		<object id="content">
-		<?php
-			  $file = 'CV_Martin_Gundersen.pdf';
-			  $filename = 'CV_Martin_Gundersen.pdf';
-			  header('Content-type: application/pdf');
-			  header('Content-Disposition: inline; filename="' . $filename . '"');
-			  header('Content-Transfer-Encoding: binary');
-			  header('Accept-Ranges: bytes');
-			  @readfile($file);
-			?>
+		<?php header('Content-type: application/pdf'); header('Content-Disposition: inline; filename="CV_Martin_Gundersen.pdf"'); readfile('CV_Martin_Gundersen.pdf'); ?> 
 		</object>
 </body>
 </html>
