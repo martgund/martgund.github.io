@@ -89,7 +89,7 @@ headsies{
     height: 11px;
     text-indent: -9999em;
 }
-#content{
+#content p{
 	padding-left: 231px;
 	padding-right:231px;
 	text-align: center;
