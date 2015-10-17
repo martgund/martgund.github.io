@@ -80,7 +80,8 @@ headsies{
 }
 
 #content {
-	width: 80%;
+	padding-left: 140px;
+	padding-right: 140px;
 	text-align: center;
 	color: white;
 	font-size: 27px;
@@ -88,7 +89,7 @@ headsies{
 
 
 #content p{
-	width: 60%;
+	margin-left: 31%;
 }
 
 
