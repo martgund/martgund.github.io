@@ -68,26 +68,27 @@
 	     
 	    $('#nav li a').click(function(){
 
-	     
-	    var toLoad = $(this).attr('href')+' #content';
-	    $('#content').hide('fast',loadContent);
-	    console.log("1")
-	    $('#load').remove();
-	    $('#load').fadeIn('normal');
-	    $('menu-open').toggle();
-	    window.location.hash = $(this).attr('href').substr(0,$(this).attr('href').length-5);
-	    function loadContent() {
-	        $('#content').load(toLoad,'',showNewContent())
-	    }
-	    function showNewContent() {
-	        $('#content').show('normal',hideLoader());
-	    }
-	    function hideLoader() {
-	        $('#load').fadeOut('normal');
-	    }
-	    return false;
-	     
-	    });
+	    	var body = $('.menu');
+	    	body.toggleClass('menu-open');
+
+		    var toLoad = $(this).attr('href')+' #content';
+		    $('#content').hide('fast',loadContent);
+		    console.log("1")
+		    $('#load').remove();
+		    $('#load').fadeIn('normal');
+		    window.location.hash = $(this).attr('href').substr(0,$(this).attr('href').length-5);
+		    function loadContent() {
+		        $('#content').load(toLoad,'',showNewContent())
+		    }
+		    function showNewContent() {
+		        $('#content').show('normal',hideLoader());
+		    }
+		    function hideLoader() {
+		        $('#load').fadeOut('normal');
+		    }
+		    return false;
+		     
+		    });
 	});
 
 
