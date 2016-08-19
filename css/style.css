@@ -1,5 +1,6 @@
 
 body{
+	
 	background: #1C1C1C;
 	overflow-x: hidden;
 	
@@ -21,7 +22,7 @@ body{
 
 headsies{
 	font-size: 80px;
-	font-family: Avenir;
+	font-family: "HelveticaNeue-Light";
 	color: white;
 	margin-top: 50px;
 	letter-spacing: 5px;
