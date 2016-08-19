@@ -64,11 +64,11 @@
 	            console.log("2")
 	        } 
 	    });
-	    var body = $('.menu');
+	    
 	    	
 	    $('#nav li a').click(function(){
 
-	    	body.toggleClass('menu-open');
+	    	$('.menu').toggleClass('menu-open');
 
 		    var toLoad = $(this).attr('href')+' #content';
 		    $('#content').hide('fast',loadContent);
