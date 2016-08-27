@@ -88,11 +88,13 @@ headsies{
 	text-align: center;
 	color: white;
 	font-size: 27px;
+	font-family: Century;
 }
 
 
 #abouttext{
 	text-align: left;
+	font-family: monospace;
 }
 
 
